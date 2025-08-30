@@ -1,130 +1,21 @@
-# AAC to MP3 Converter
+# AI Content Machine
 
-A Python script that converts AAC audio files to MP3 format using the `pydub` library.
+A collection of AI-powered tools and scripts for content creation, including video processing, word analysis, and linguistic exploration.
 
-## Features
+## 🎯 What's Inside
 
-- Convert single AAC files to MP3
-- Batch conversion of multiple AAC files
-- Configurable MP3 bitrate
-- Comprehensive error handling and logging
-- Command-line interface with helpful usage examples
+- **`ai_video/`** - Video processing tools, audio conversion, and media manipulation
+- **`word_jokes/`** - Hungarian word play generator and linguistic analysis tools
 
-## Prerequisites
+## 🚀 Quick Start
 
-### 1. Install FFmpeg
+Each folder contains its own specialized tools. Check the individual README files for specific usage instructions.
 
-The script requires FFmpeg to be installed on your system for audio processing.
+## 🛠️ Requirements
 
-**macOS (using Homebrew):**
-```bash
-brew install ffmpeg
-```
+- Python 3.x
+- See individual project folders for specific dependencies
 
-**Ubuntu/Debian:**
-```bash
-sudo apt-get update
-sudo apt-get install ffmpeg
-```
+---
 
-**Windows:**
-Download from [FFmpeg official website](https://ffmpeg.org/download.html) or install via Chocolatey:
-```bash
-choco install ffmpeg
-```
-
-### 2. Install Python Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Or install pydub directly:
-```bash
-pip install pydub
-```
-
-## Usage
-
-### Single File Conversion
-
-Convert a single AAC file to MP3:
-```bash
-python aac_to_mp3_converter.py input.aac
-```
-
-Convert with custom output filename:
-```bash
-python aac_to_mp3_converter.py input.aac output.mp3
-```
-
-### Batch Conversion
-
-Convert all AAC files in a directory:
-```bash
-python aac_to_mp3_converter.py --batch /path/to/aac/files/
-```
-
-Convert with custom output directory:
-```bash
-python aac_to_mp3_converter.py --batch /path/to/aac/files/ --output-dir /path/to/mp3/files/
-```
-
-### Custom Bitrate
-
-Set custom MP3 bitrate (default is 192k):
-```bash
-python aac_to_mp3_converter.py input.aac --bitrate 320k
-```
-
-### Help
-
-View all available options:
-```bash
-python aac_to_mp3_converter.py --help
-```
-
-## Examples
-
-Convert the AAC files in your current directory:
-```bash
-python aac_to_mp3_converter.py gear.aac
-python aac_to_mp3_converter.py towel.aac
-```
-
-Convert both files with custom bitrate:
-```bash
-python aac_to_mp3_converter.py gear.aac --bitrate 256k
-python aac_to_mp3_converter.py towel.aac --bitrate 256k
-```
-
-## Output
-
-- The script will create MP3 files in the same directory as the input files (unless specified otherwise)
-- Progress and status messages are displayed during conversion
-- Error messages are shown if conversion fails
-
-## Troubleshooting
-
-### Common Issues
-
-1. **"pydub library is required" error:**
-   - Install pydub: `pip install pydub`
-
-2. **FFmpeg not found:**
-   - Install FFmpeg using the instructions above
-   - Make sure FFmpeg is in your system PATH
-
-3. **Permission errors:**
-   - Make sure you have write permissions in the output directory
-
-4. **File not found errors:**
-   - Check that the input file path is correct
-   - Use absolute paths if needed
-
-### Getting Help
-
-Run the script with `--help` to see all available options:
-```bash
-python aac_to_mp3_converter.py --help
-``` 
+*AI-powered content creation toolkit*
