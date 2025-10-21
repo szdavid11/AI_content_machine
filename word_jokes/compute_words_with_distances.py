@@ -52,7 +52,7 @@ def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter)
     # Convenience selector: choose k=2..5 instead of paths
     ap.add_argument("--k", type=int, choices=[2, 3, 4, 5],
-                    help="If set, uses word_jokes/{k}_element_word_comibations.csv and auto output name")
+                    help="If set, uses word_jokes/word_combinations/{k}_element_word_comibations.csv and auto output name")
     # Manual paths (optional when --k is used)
     ap.add_argument("--input", required=False, help="Path to combinations CSV (2..5 elements)")
     ap.add_argument("--output", required=False, help="Path to write enriched CSV")
@@ -71,8 +71,8 @@ def parse_args() -> argparse.Namespace:
     # Derive input/output from --k if provided
     if args.k is not None:
         # Use the repo's existing naming (note the 'comibations' spelling)
-        args.input = args.input or f"word_jokes/{args.k}_element_word_comibations.csv"
-        args.output = args.output or f"word_jokes/words_with_distances_{args.k}.csv"
+        args.input = args.input or f"word_jokes/word_combinations/{args.k}_element_word_comibations.csv"
+        args.output = args.output or f"word_jokes/word_combinations/words_with_distances_{args.k}.csv"
 
     # Validate presence of paths if --k was not provided
     if args.input is None or args.output is None:
